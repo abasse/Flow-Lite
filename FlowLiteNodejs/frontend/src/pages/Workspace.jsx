@@ -49,14 +49,18 @@ const Workspace = () => {
             <CgFileDocument /> Documentation
           </NavLink>
         </div>
+  
         <div className='p-6'>
+          {!isDocumentationPage && 
           <div className="rounded-xl border bg-white">
               <div className="space-y-1.5 p-4">
-                <div className="font-semibold tracking-tight text-sm">Support</div>
+                <div className="font-semibold tracking-tight text-sm">The Support</div>
                 <div className="text-xs"> We are here to help. Email us at <strong>hello@uiroom.pro</strong> if you need any help.</div>
                 </div>
               </div>
+              }
         </div>
+
         </nav>
       </div>
 

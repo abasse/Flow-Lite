@@ -9,7 +9,7 @@ services:
       # Set this to your frontend's public URL so CORS is allowed
       FRONTEND_URL: ${FRONTEND_URL:-http://localhost}
     volumes:
-      - sqlite_data:/app/database
+      - /opt/flowlite/database:/app/database
     expose:
       - "5001"
 
@@ -24,6 +24,3 @@ services:
       - "80"
     depends_on:
       - backend
-
-volumes:
-  sqlite_data:
