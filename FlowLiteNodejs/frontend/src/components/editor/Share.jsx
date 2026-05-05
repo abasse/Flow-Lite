@@ -71,7 +71,7 @@ const Share = ({flowId}) => {
         <div className='mt-2'>
           <div className='border rounded overflow-hidden flex text-xs'>
             <div className='bg-gray-50 px-2 flex items-center select-all' ref={viewUrlRef}>
-              {`http://{your_domain_name}/v/${flowId}`}
+              {`${window.location.origin}/v/${flowId}`}
             </div>
             <button onClick={handleCopyUrl} className='bg-white flex items-center justify-center gap-1 px-2 w-24 h-7 hover:bg-gray-100 active:bg-gray-200 border-l'>
               <LuCopy />

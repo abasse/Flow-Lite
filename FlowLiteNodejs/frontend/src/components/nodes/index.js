@@ -8,6 +8,21 @@ import Contact from "./wireframes/Contact"
 import Blog from "./wireframes/Blog"
 import Portfolio from "./wireframes/Portfolio"
 import Files from "./wireframes/Files"
+import Page from "./wireframes/Page"
+import VideoPage from "./wireframes/VideoPage"
+import Opulence from "./wireframes/Opulence"
+import OpinionArticle from "./wireframes/OpinionArticle"
+import Article from "./wireframes/Article"
+import ArticlePhoto from "./wireframes/ArticlePhoto"
+import BreakingNews from "./wireframes/BreakingNews"
+import Homepage from "./wireframes/Homepage"
+import Category from "./wireframes/Category"
+import SearchResults from "./wireframes/SearchResults"
+import Newsletter from "./wireframes/Newsletter"
+import NewsComments from "./wireframes/NewsComments"
+import Paywall from "./wireframes/Paywall"
+import NoResults from "./wireframes/NoResults"
+import Sitemap from "./wireframes/Sitemap"
 
 // Commerce
 import Search from "./wireframes/Search"
@@ -32,6 +47,8 @@ import Comments from "./wireframes/Comments"
 import Download from "./wireframes/Download"
 
 // Utility
+import Xml from "./wireframes/Xml"
+import Json from "./wireframes/Json"
 import SignIn from "./wireframes/SignIn"
 import Register from "./wireframes/Register"
 import Error from "./wireframes/Error"
@@ -124,6 +141,66 @@ export const nodesTypes = {
     subgroup: "content",
     component: Files
   },
+  page: {
+    label: "Page",
+    group: "wireframe",
+    subgroup: "content",
+    component: Page
+  },
+  videoPage: {
+    label: "Video Page",
+    group: "wireframe",
+    subgroup: "content",
+    component: VideoPage
+  },
+  opulence: {
+    label: "Opulence",
+    group: "wireframe",
+    subgroup: "content",
+    component: Opulence
+  },
+  article: {
+    label: "Article",
+    group: "wireframe",
+    subgroup: "content",
+    component: Article
+  },
+  opinionArticle: {
+    label: "Opinion Article",
+    group: "wireframe",
+    subgroup: "content",
+    component: OpinionArticle
+  },
+  articlePhoto: {
+    label: "Article Photo",
+    group: "wireframe",
+    subgroup: "content",
+    component: ArticlePhoto
+  },
+  breakingNews: {
+    label: "Breaking News",
+    group: "wireframe",
+    subgroup: "content",
+    component: BreakingNews
+  },
+  homepage: {
+    label: "Homepage",
+    group: "wireframe",
+    subgroup: "content",
+    component: Homepage
+  },
+  category: {
+    label: "Category",
+    group: "wireframe",
+    subgroup: "content",
+    component: Category
+  },
+  searchResults: {
+    label: "Search Results",
+    group: "wireframe",
+    subgroup: "content",
+    component: SearchResults
+  },
   search: {
     label: "Search",
     group: "wireframe",
@@ -159,6 +236,12 @@ export const nodesTypes = {
     group: "wireframe",
     subgroup: "commerce",
     component: Review
+  },
+  newsletter: {
+    label: "Newsletter",
+    group: "wireframe",
+    subgroup: "marketing",
+    component: Newsletter
   },
   callToAction: {
     label: "Call to action",
@@ -214,11 +297,29 @@ export const nodesTypes = {
     subgroup: "interactive",
     component: Comments
   },
+  newsComments: {
+    label: "News Comments",
+    group: "wireframe",
+    subgroup: "interactive",
+    component: NewsComments
+  },
   download: {
     label: "Download",
     group: "wireframe",
     subgroup: "interactive",
     component: Download
+  },
+  xml: {
+    label: "XML",
+    group: "wireframe",
+    subgroup: "utility",
+    component: Xml
+  },
+  json: {
+    label: "JSON",
+    group: "wireframe",
+    subgroup: "utility",
+    component: Json
   },
   signIn: {
     label: "SignIn",
@@ -255,6 +356,24 @@ export const nodesTypes = {
     group: "wireframe",
     subgroup: 'utility',
     component: ThankYou
+  },
+  paywall: {
+    label: "Paywall",
+    group: "wireframe",
+    subgroup: "utility",
+    component: Paywall
+  },
+  noResults: {
+    label: "No Results",
+    group: "wireframe",
+    subgroup: "utility",
+    component: NoResults
+  },
+  sitemap: {
+    label: "Sitemap",
+    group: "wireframe",
+    subgroup: "utility",
+    component: Sitemap
   },
   circle: {
     label: "Circle",
