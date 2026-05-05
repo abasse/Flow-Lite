@@ -1,11 +1,10 @@
 import Browser from './Browser'
-import { Form as FormSection, Footer } from './sections'
+import { Form as FormSection } from './sections'
 
 const Form = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <FormSection/>
-      <Footer/>
     </Browser>
   )
 }

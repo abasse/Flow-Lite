@@ -10,6 +10,8 @@ const NodeEdit = ({node, updateNode, deleteElements}) => {
   const [selectedColor, setSelectedColor] = useState("");
   const [url, setUrl] = useState("");
   const [nodeGroup, setNodeGroup] = useState(null);
+  const [showNav, setShowNav] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -32,6 +34,16 @@ const NodeEdit = ({node, updateNode, deleteElements}) => {
     deleteElements({nodes: [{id: node.id}]});
   }
 
+  const handleShowNavChange = (e) => {
+    setShowNav(e.target.checked);
+    updateNode(node.id, {showNav: e.target.checked});
+  }
+
+  const handleShowFooterChange = (e) => {
+    setShowFooter(e.target.checked);
+    updateNode(node.id, {showFooter: e.target.checked});
+  }
+
   // Effect hook to initialize node data
   useEffect(() => {
 
@@ -40,6 +52,8 @@ const NodeEdit = ({node, updateNode, deleteElements}) => {
       setLabel(node.data.label);
       setSelectedColor(node.data.color);
       setUrl(node.data?.url || '');
+      setShowNav(node.data?.showNav || false);
+      setShowFooter(node.data?.showFooter || false);
     }
 
     // Set the node's group based on its type
@@ -64,12 +78,27 @@ const NodeEdit = ({node, updateNode, deleteElements}) => {
         <textarea type="text" rows={3} value={label} onChange={handleLabelChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "  />
       </div>
 
-      {/* If the node is a wireframe, display the URL input field */}
-      {nodeGroup === 'wireframe' && 
-      <div>
-        <label  className="block mb-2 text-sm font-medium text-gray-900 ">Url</label>
-        <input type="text" value={url} onChange={handleUrlChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "  />
-      </div>
+      {/* If the node is a wireframe, display the URL input and nav/footer toggles */}
+      {nodeGroup === 'wireframe' &&
+      <>
+        <div>
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">Url</label>
+          <input type="text" value={url} onChange={handleUrlChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "  />
+        </div>
+        <div>
+          <label className="block mb-2 text-sm font-medium text-gray-900">Layout</label>
+          <div className='flex flex-col gap-2'>
+            <label className='flex items-center gap-2 text-sm text-gray-700 cursor-pointer'>
+              <input type='checkbox' checked={showNav} onChange={handleShowNavChange} className='w-4 h-4 rounded border-gray-300' />
+              Navigation
+            </label>
+            <label className='flex items-center gap-2 text-sm text-gray-700 cursor-pointer'>
+              <input type='checkbox' checked={showFooter} onChange={handleShowFooterChange} className='w-4 h-4 rounded border-gray-300' />
+              Footer
+            </label>
+          </div>
+        </div>
+      </>
       }
 
       {/* Color selection section*/}

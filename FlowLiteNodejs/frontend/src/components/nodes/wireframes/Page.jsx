@@ -1,5 +1,5 @@
 import Browser from './Browser'
-import { Frame, Footer } from './sections'
+import { Frame } from './sections'
 
 const PageBody = () => {
   return (
@@ -21,7 +21,6 @@ const Page = ({ data, selected }) => {
       </div>
       <Frame />
       <PageBody />
-      <Footer />
     </Browser>
   )
 }

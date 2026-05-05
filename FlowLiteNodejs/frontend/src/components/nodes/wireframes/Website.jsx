@@ -1,12 +1,10 @@
-import { Footer, Hero3, Navigation } from './sections';
+import { Hero3 } from './sections';
 import Browser from './Browser';
 
 const Website = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
-      <Navigation/>
+    <Browser data={data} selected={selected}>
       <Hero3/>
-      <Footer />
     </Browser>
   )
 }

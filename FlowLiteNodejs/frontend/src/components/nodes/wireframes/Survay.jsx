@@ -1,11 +1,10 @@
 import Browser from './Browser'
-import { Survay as SurvaySection, Footer, Navigation } from './sections'
+import { Survay as SurvaySection } from './sections'
 
 const Survay = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <SurvaySection/>
-      <Footer/>
     </Browser>
   )
 }

@@ -1,12 +1,10 @@
 import Browser from './Browser'
-import { CallToAction as CallToActionSection, Footer, Navigation } from './sections'
+import { CallToAction as CallToActionSection } from './sections'
 
 const CallToAction = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
-      <Navigation />
+    <Browser data={data} selected={selected}>
       <CallToActionSection/>
-      <Footer/>
     </Browser>
   )
 }

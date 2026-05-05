@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Handle, Position} from '@xyflow/react'
 import { colors } from '../../colors';
+import { Navigation, Footer } from './sections';
 
 // Default style for the handles
 const DEFAULT_HANDLE_STYLE = {
@@ -25,7 +26,9 @@ const Browser = ({children, data, selected}) => {
       {/* If preview is enabled, render a simplified view of the content */}
       {preview ? (
       <div className="bg-white p-1 min-w-20 text-[10px] flex flex-col gap-1 border rounded ">
+        {data.showNav && <Navigation />}
         {children}
+        {data.showFooter && <Footer />}
       </div>
       ) : (
       // Otherwise, render the full content
@@ -58,9 +61,9 @@ const Browser = ({children, data, selected}) => {
               <span className="w-1 h-1 rounded-full bg-green-400"></span>
           </div>
           <div className="bg-white p-1 min-w-20 text-[10px] flex flex-col gap-1">
-            
-            {/* Render actual page */}
+            {data.showNav && <Navigation />}
             {children}
+            {data.showFooter && <Footer />}
           </div>
         </div>
       </div>

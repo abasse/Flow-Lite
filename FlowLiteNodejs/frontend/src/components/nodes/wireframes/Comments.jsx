@@ -1,14 +1,12 @@
 import Browser from './Browser'
-import { Comments as CommentsSection, Footer } from './sections'
+import { Comments as CommentsSection } from './sections'
 
 const Comments = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <CommentsSection/>
-      <Footer />
     </Browser>
   )
 }
-
 
 export default Comments

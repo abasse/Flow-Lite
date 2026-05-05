@@ -1,11 +1,10 @@
 import Browser from './Browser'
-import {Footer, SearchForm} from './sections'
+import { SearchForm } from './sections'
 
 const Search = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <SearchForm />
-      <Footer />
     </Browser>
   )
 }

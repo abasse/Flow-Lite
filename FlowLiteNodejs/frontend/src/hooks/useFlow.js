@@ -59,7 +59,7 @@ const useFlow = (flowId) => {
     const id = nanoid(8)
     const label = type.charAt(0).toUpperCase() + type.slice(1)
     // Default node
-    const newNode = {id: id, type: type, position: {x: position.x, y:position.y}, data: {label: label, color: "gray", ...data}}
+    const newNode = {id: id, type: type, position: {x: position.x, y:position.y}, data: {label: label, color: "gray", showNav: false, showFooter: false, ...data}}
     setNodes(prev => {
       const updatedNodes = [...prev, newNode] 
       updateStorage({nodes: updatedNodes})

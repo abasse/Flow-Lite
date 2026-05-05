@@ -1,11 +1,10 @@
 import Browser from './Browser'
-import { ThankYou as ThankYouSection, Footer, Navigation } from './sections'
+import { ThankYou as ThankYouSection } from './sections'
 
 const ThankYou = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <ThankYouSection/>
-      <Footer/>
     </Browser>
   )
 }

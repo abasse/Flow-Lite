@@ -1,13 +1,12 @@
 import Browser from './Browser'
-import {Article, Footer} from './sections'
+import { Article } from './sections'
 
 const Blog = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <Article />
       <Article />
       <Article />
-      <Footer />
     </Browser>
   )
 }

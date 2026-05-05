@@ -1,21 +1,16 @@
 import Browser from './Browser'
-import { Footer, Navigation } from './sections'
 import { LuImage, LuSearch } from 'react-icons/lu'
 
 const SearchResults = ({ data, selected }) => {
   return (
     <Browser data={data} selected={selected}>
-      <Navigation />
-      {/* Search bar */}
       <div className='px-2 py-1 flex items-center gap-1'>
         <LuSearch size={6} className='text-gray-400' />
         <div className='flex-1 h-2 bg-gray-100 rounded-sm border border-gray-200'></div>
       </div>
-      {/* Results count */}
       <div className='px-2 pb-0.5'>
         <div className='h-0.5 bg-gray-200 w-10 rounded-sm'></div>
       </div>
-      {/* Results */}
       <div className='px-2 flex flex-col gap-1'>
         {[1,2,3,4].map(i => (
           <div key={i} className='flex items-start gap-1'>
@@ -30,7 +25,6 @@ const SearchResults = ({ data, selected }) => {
           </div>
         ))}
       </div>
-      <Footer />
     </Browser>
   )
 }

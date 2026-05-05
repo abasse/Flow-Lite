@@ -1,12 +1,11 @@
 import Browser from './Browser'
-import {Footer, HeroText, Stars} from './sections'
+import { HeroText, Stars } from './sections'
 
 const Review = ({data, selected}) => {
   return (
-    <Browser data={data}  selected={selected}>
+    <Browser data={data} selected={selected}>
       <HeroText/>
       <Stars />
-      <Footer />
     </Browser>
   )
 }

@@ -1,5 +1,5 @@
 import Browser from './Browser'
-import { Video, Footer } from './sections'
+import { Video } from './sections'
 
 const BodyText = () => {
   return (
@@ -20,7 +20,6 @@ const VideoPage = ({ data, selected }) => {
         <div className='h-1 bg-gray-300 w-10 rounded-sm'></div>
       </div>
       <BodyText />
-      <Footer />
     </Browser>
   )
 }
