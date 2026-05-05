@@ -10,8 +10,8 @@ services:
       FRONTEND_URL: ${FRONTEND_URL:-http://localhost}
     volumes:
       - sqlite_data:/app/database
-    ports:
-      - "5001:5001"
+    expose:
+      - "5001"
 
   frontend:
     build:
@@ -20,8 +20,8 @@ services:
         # Must point to the public URL of the backend at build time
         VITE_API_URL: ${VITE_API_URL:-http://localhost:5001/api}
     restart: unless-stopped
-    ports:
-      - "80:80"
+    expose:
+      - "80"
     depends_on:
       - backend
 
