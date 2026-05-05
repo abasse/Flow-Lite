@@ -22,11 +22,11 @@ const Workspace = () => {
         </div>
       }
       {/* Demo info */}
-      {!isDocumentationPage && 
+      {/* {!isDocumentationPage && 
         <div className='fixed right-6 top-6  text-xs font-normal bg-gray-50 border border-gray-400 p-3 rounded flex items-center gap-1 z-10'>
           <PiDatabase /> Please note that this version uses <strong>Node.js</strong> as a backend.
         </div>
-      }
+      } */}
 
       {/* Logo  */}
       <div className='fixed inset-y-0 left-0 w-60 bg-gray-50 border-r'>
@@ -51,14 +51,14 @@ const Workspace = () => {
         </div>
   
         <div className='p-6'>
-          {!isDocumentationPage && 
-          <div className="rounded-xl border bg-white">
+
+          {/* <div className="rounded-xl border bg-white">
               <div className="space-y-1.5 p-4">
                 <div className="font-semibold tracking-tight text-sm">The Support</div>
                 <div className="text-xs"> We are here to help. Email us at <strong>hello@uiroom.pro</strong> if you need any help.</div>
                 </div>
-              </div>
-              }
+              </div> */}
+             
         </div>
 
         </nav>
